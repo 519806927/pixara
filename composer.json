@@ -1,0 +1,12 @@
+{
+    "name": "hn/log",
+    "description": "日志类",
+    "type": "library",
+    "authors": [
+        {
+            "name": "谢凡",
+            "email": "xiefan@pixara.cn"
+        }
+    ],
+    "require": {}
+}
