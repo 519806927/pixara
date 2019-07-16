@@ -25,7 +25,7 @@
  *
  * ```
  */
-namespace hnLog;
+namespace hnLogger;
 class Logger
 {
     const EMERGENCY = 'emergency';
