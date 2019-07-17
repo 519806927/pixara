@@ -141,7 +141,7 @@ class Logger
         $fileFormat = date('Ymd') . '_$suffix$name.log';
 
 
-        self::$appgroup = self::$appgroup ? self::$appgroup : implode(DIRECTORY_SEPARATOR, array(GROUP_NAME, MODULE_NAME));
+        self::$appgroup = self::$appgroup ? self::$appgroup : implode(DIRECTORY_SEPARATOR, array(CONTROLLER_NAME, MODULE_NAME));
         self::$appname = self::$appname ? self::$appname : (defined('HN_APPNAME') ? HN_APPNAME : "noAppName");
 
         // 命名前缀扩展
@@ -222,14 +222,14 @@ class Logger
             'log_type' => self::$logType,
 
             // 请求ID
-            'request_method' => GROUP_NAME . '/' . MODULE_NAME . '/' . ACTION_NAME,
+            'request_method' => CONTROLLER_NAME . '/' . MODULE_NAME . '/' . ACTION_NAME,
             'request_id' => self::getRequestId(),
 
             'appname' => defined('HN_APPNAME') ? HN_APPNAME : "noAppName",
             'appname_set' => !empty(self::$appname) ? self::$appname : (defined('HN_APPNAME') ? HN_APPNAME : "noAppName"),
 
-            'module' => GROUP_NAME,
-            'module_class' => implode(DIRECTORY_SEPARATOR, array(GROUP_NAME, MODULE_NAME)),
+            'module' => CONTROLLER_NAME,
+            'module_class' => implode(DIRECTORY_SEPARATOR, array(CONTROLLER_NAME, MODULE_NAME)),
             'module_set' => self::$appgroup,
             'function' => ACTION_NAME,
 
